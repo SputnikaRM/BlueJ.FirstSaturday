@@ -11,6 +11,8 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
+        player1= false;
+        if (player1.isAlive() = true 
      
     }
     
@@ -46,8 +48,9 @@ public class WriteIFs
      * 
      * 
      * instance variables
-     * / 
-   int x;
+     */ 
+  
+  int x;
    int tt_t;
    int tt_s;
    int oo1, oo2;
