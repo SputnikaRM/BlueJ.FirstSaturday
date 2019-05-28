@@ -275,10 +275,13 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
-
- 
+        for (int i = 0; i<=6; i++) {
+        sumOfThrees += threes_array[i];
+        i+=i;
+        w+=1;
+        }
             // calling
-            w = w + 1;
+            
             // each time through the inner loop
         
         System.out.print("The Sum is ");
@@ -292,7 +295,12 @@ public class WriteLoops {
     public int rewriteFooAsWhile() {
         int w = 0;
         int sumOfThrees = 0;
-
+        int i =0;
+        while( i <= 6) {
+           sumOfThrees += threes_array[i];
+           i+=i;
+            w+=1;
+        }
  
             // calling
             w = w + 1;
@@ -314,9 +322,14 @@ public class WriteLoops {
     public int manageYardAndJunior() {
         int w = 0;
         boolean onTime = true;
-
         // ADD YOUR CODE here.
- 
+        boolean yardNeedsMowed = true;
+        while (isSummer ()) {
+        if (yardNeedsMowed == true) {
+            yellAtJuniorToMowLawn ();
+        }
+        } 
+        sendJuniorBackToSchool("Wednesday");
             // be sure to call
             w = w + 1;
             // each time inside the loop
@@ -332,7 +345,9 @@ public class WriteLoops {
     public int tallyVote1() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
+        for (int x = 0; x <= numberOfVotes; x++) {
+        System.out.println(voteTallies[x]);
+        }
  
             // calling
             w = w + 1;
@@ -347,7 +362,11 @@ public class WriteLoops {
     public int tallyVote2() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
+        int idx =0;
+        while (idx<=numberOfVotes) {
+        System.out.println(voteTallies[idx]);
+        idx+=1;
+        }
 
             // calling
             w = w + 1;
