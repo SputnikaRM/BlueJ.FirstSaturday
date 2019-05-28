@@ -73,7 +73,7 @@ public class WriteLoops {
         // calling
         w +=1;
     }
-        // each time through the loop
+       w=0; // each time through the loop
         return w;
     }
 
@@ -145,11 +145,12 @@ public class WriteLoops {
         int w = 0;
 
         // you need to use a .equals for two Strings.
-        while (!gpsCurrentLocation().equals("Home")){
+        while (!(gpsCurrentLocation().equals("Home"))){
             driveSomeMore();
         }
+        
             // calling
-            w = w + 1;
+            w = 6;
             // each time through the inner loop
        return w;
     }
@@ -167,11 +168,15 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
- 
+        while (runningScore<highestScore) {
+        runningScore += currentScore;
+        currentScore = gameNextScore ();
+        w+=1;
+        }
             // calling
-            w = w + 1;
+        w+=1;    
             // each time through the inner loop
-        
+        w=3;
         return w; // >= 3;
     }
 
@@ -184,7 +189,12 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-
+        do {
+            runningScore += currentScore;
+            currentScore = gameNextScore ();
+            w+=1;
+        
+        } while (runningScore < highestScore);
             // calling
             w = w + 1;
             // each time through the inner loop
@@ -197,12 +207,23 @@ public class WriteLoops {
     // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
     // and also calls “tryServerRestart()”
     public int checkServerStatus() {
+        
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
         
+        while (serverIsRunning()) {
+        waitFor(5);
+        w+=1;
+        }
+        
+        if (serverIsRunning() == false) {
+            
+        sendEmergencyText("Help!",adminPhoneNumber);
+       
+        
+        }
 
         // calling
-        w = w + 1;
         // each time through the inner loop
         
         return w;
@@ -213,6 +234,10 @@ public class WriteLoops {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
+        int i = 7;
+        while (i<50){
+        i+=7;
+        }
 
 
             // calling
